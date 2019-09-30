@@ -1,0 +1,31 @@
+1. Need fortran compiler.
+
+Get binary installer from http://hpc.sourceforge.net (use gfortran link and follow instructions in the first paragraph)
+
+2. pip install ellc  (https://pypi.org/project/ellc/)
+
+3. also pip install emcee (https://emcee.readthedocs.io/en/stable/user/install/#using-pip)
+
+and corner (https://corner.readthedocs.io/en/latest/)
+
+4. Use sample notebook to prepare light curve file in format desired by ellc_emcee 
+
+5. Use V-K color (from Simbad) to estimate Teff of primary star. (edit notebook to do this?)
+
+6. Use eclipse widths to estimate R_1/a (where R_1/a ~ width of eclipse in phase)
+
+7. Use eclipse depths to estimate surface brightness ratios.  (dip_1 / dip_2 ~ sb_2 / sb_1)
+
+8. Use eclipse phases to estimate eccentricity: e ~ phase_diff_max - phase_diff_min
+8.1 Print out T_O of primary eclipse for table, and for Chase to use as TO in her RV fits.
+
+9. save all these parameters in a log file
+
+10. start ellc_emcee with a command like:
+
+./ellc_emcee
+
+Use log file to guide responses to user questions.
+
+let run!
+
